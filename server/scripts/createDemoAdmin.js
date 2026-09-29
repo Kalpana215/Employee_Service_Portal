@@ -6,13 +6,21 @@ const User = require("../models/User");
 
 const MONGODB_URI = process.env.MONGO_URI || "mongodb://localhost:27017/employee_service_portal";
 const ADMIN_USER = {
-  name: "Admin User",
-  email: "admin@serviceportal.com",
-  password: "Admin@123",
+  name: process.env.DEMO_ADMIN_NAME || "Admin User",
+  email: process.env.DEMO_ADMIN_EMAIL,
+  password: process.env.DEMO_ADMIN_PASSWORD,
   role: "admin",
 };
 
 async function createDemoAdmin() {
+  if (!ADMIN_USER.email || !ADMIN_USER.password) {
+    console.error(
+      "Set DEMO_ADMIN_EMAIL and DEMO_ADMIN_PASSWORD env vars before running this script."
+    );
+    process.exitCode = 1;
+    return;
+  }
+
   try {
     await mongoose.connect(MONGODB_URI);
 
