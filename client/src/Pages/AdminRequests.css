@@ -1,0 +1,170 @@
+.admin-requests-shell {
+  min-height: 100svh;
+  width: 100%;
+  background: #f5f7fa;
+  color: #2d3748;
+  text-align: left;
+}
+
+.admin-requests-header {
+  min-height: 72px;
+  padding: 16px max(20px, calc((100% - 1160px) / 2));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.admin-requests-header h1 {
+  margin: 0;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.admin-requests-header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.admin-requests-header-actions button,
+.admin-request-view {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-requests-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 20px;
+}
+
+.admin-requests-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.admin-requests-title p {
+  margin: 0 0 5px;
+  color: #718096;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.admin-requests-title h2 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 28px;
+}
+
+.admin-requests-title > span {
+  color: #718096;
+  font-size: 14px;
+}
+
+.admin-requests-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+}
+
+.admin-requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: left;
+}
+
+.admin-requests-table th,
+.admin-requests-table td {
+  padding: 13px 14px;
+  border-bottom: 1px solid #edf0f4;
+  vertical-align: middle;
+}
+
+.admin-requests-table th {
+  background: #f8fafc;
+  color: #4a5568;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.admin-requests-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.request-id {
+  max-width: 130px;
+  overflow-wrap: anywhere;
+  color: #718096;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 12px;
+}
+
+.request-subject {
+  min-width: 150px;
+  font-weight: 600;
+}
+
+.admin-request-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #fffaf0;
+  color: #975a16;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-in-progress {
+  background: #ebf8ff;
+  color: #2b6cb0;
+}
+
+.status-completed {
+  background: #f0fff4;
+  color: #276749;
+}
+
+.admin-request-view {
+  border-color: #5b67d8;
+  background: #5b67d8;
+  color: white;
+}
+
+.admin-requests-message {
+  color: #718096;
+}
+
+.admin-requests-error {
+  color: #c53030;
+}
+
+@media (max-width: 600px) {
+  .admin-requests-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px 20px;
+  }
+
+  .admin-requests-main {
+    padding: 28px 14px;
+  }
+}

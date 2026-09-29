@@ -1,0 +1,170 @@
+.admin-dashboard-shell {
+  min-height: 100svh;
+  width: 100%;
+  background: #f5f7fa;
+  color: #2d3748;
+  text-align: left;
+}
+
+.admin-dashboard-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+}
+
+.admin-header-content,
+.admin-dashboard-main {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.admin-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.admin-header-content h1 {
+  margin: 0;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.admin-logout-button,
+.admin-primary-button {
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-logout-button {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+}
+
+.admin-dashboard-main {
+  padding: 40px 20px;
+}
+
+.admin-dashboard-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.admin-eyebrow {
+  margin: 0 0 6px;
+  color: #718096;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.admin-dashboard-heading h2 {
+  margin: 0;
+  color: #2d3748;
+  font-size: 30px;
+  font-weight: 650;
+}
+
+.admin-primary-button {
+  background: #5b67d8;
+  color: white;
+}
+
+.admin-primary-button:hover {
+  background: #4c58c4;
+}
+
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.admin-stat-card {
+  min-height: 132px;
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #667eea;
+  border-radius: 8px;
+  background: white;
+}
+
+.admin-stat-pending {
+  border-top-color: #dd9b35;
+}
+
+.admin-stat-in-progress {
+  border-top-color: #3182ce;
+}
+
+.admin-stat-completed {
+  border-top-color: #319795;
+}
+
+.admin-stat-card h3 {
+  margin: 0 0 18px;
+  color: #718096;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-stat-card p {
+  margin: 0;
+  color: #2d3748;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.admin-dashboard-message {
+  margin: 0;
+  color: #718096;
+}
+
+.admin-dashboard-error {
+  color: #c53030;
+}
+
+@media (max-width: 760px) {
+  .admin-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-dashboard-header {
+    padding: 16px;
+  }
+
+  .admin-header-content h1 {
+    font-size: 19px;
+  }
+
+  .admin-dashboard-main {
+    padding: 28px 16px;
+  }
+
+  .admin-dashboard-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .admin-dashboard-heading h2 {
+    font-size: 26px;
+  }
+
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
